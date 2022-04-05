@@ -1,4 +1,20 @@
-﻿namespace CALCULADORA
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Windows.Forms.ComponentModel;
+using System.Windows.Forms.Design;
+using System.Windows.Forms.Automation;
+using System.Windows.Forms.Layout;
+using System.Windows.Forms.PropertyGridInternal;
+using System.Windows.Forms.VisualStyles;
+
+namespace CALCULADORA
 {
     public partial class Form1 : Form
     {
@@ -299,7 +315,20 @@
             miEstandar.Click += new EventHandler(menuEstandar_Click);
             miCientifica.Click += new EventHandler(menuCientifica_Click);
             btnPi.Click+= new EventHandler(btnPi_Click);
-
+            btnLog.Click += new EventHandler(btnLog_Click);
+            btnSin.Click+= new EventHandler(btnSin_Click);
+            btnExp.Click+= new EventHandler(btnExp_Click);
+            btnLnx.Click+= new EventHandler (btnLnx_Click);
+            btnSqrt.Click += new EventHandler(btnSqrt_Click);
+            btnCos.Click+= new EventHandler(btnCos_Click);
+            btnTan.Click+= new EventHandler(btnTan_Click);
+            btnCuadrado.Click += new EventHandler(btnCuadrado_Click);
+            //btnXy.Click += new EventHandler(btnXY_Click);
+            btnSinh.Click+= new EventHandler(btnSinh_Click);
+            btnTanh.Click += new EventHandler(btnTanhh_Click);
+            btnCosh.Click+= new EventHandler(btnCosh_Click);
+            btnDec.Click+= new EventHandler(btnDec_Click);
+            btnMod.Click+= new EventHandler(btnMod_Click);
 
             //Agregar controles al formulario
             this.Controls.Add(txtDisplay);
@@ -309,6 +338,84 @@
             menu.Items.Add(catTipo);
             this.Controls.Add(menu);
             lblOperacion.BringToFront();
+        }
+
+        private void btnMod_Click(object? sender, EventArgs e)
+        {
+            lblOperacion.Text = $"Decimales({txtDisplay.Text}) =";
+            txtDisplay.Text = Math.Abs(Double.Parse(txtDisplay.Text)).ToString();
+        }
+
+        private void btnDec_Click(object? sender, EventArgs e)
+        {
+            lblOperacion.Text = $"Decimales({txtDisplay.Text}) =";
+            txtDisplay.Text = Math.Round(Double.Parse(txtDisplay.Text)).ToString();
+        }
+
+        private void btnCosh_Click(object? sender, EventArgs e)
+        {
+            lblOperacion.Text = $"Cosh({txtDisplay.Text}) =";
+            txtDisplay.Text = Math.Cosh(Double.Parse(txtDisplay.Text)).ToString();
+        }
+
+        private void btnTanhh_Click(object? sender, EventArgs e)
+        {
+            lblOperacion.Text = $"Tanh({txtDisplay.Text}) =";
+            txtDisplay.Text = Math.Tanh(Double.Parse(txtDisplay.Text)).ToString();
+        }
+
+        private void btnSinh_Click(object? sender, EventArgs e)
+        {
+            lblOperacion.Text = $"Sinh({txtDisplay.Text}) =";
+            txtDisplay.Text = Math.Sinh(Double.Parse(txtDisplay.Text)).ToString();
+        }
+
+        private void btnCuadrado_Click(object? sender, EventArgs e)
+        {
+            lblOperacion.Text = $"Cuadrado({txtDisplay.Text}) =";
+            txtDisplay.Text = Math.Pow(Double.Parse(txtDisplay.Text),2).ToString();
+        }
+
+        private void btnTan_Click(object? sender, EventArgs e)
+        {
+            lblOperacion.Text = $"Tan({txtDisplay.Text}) =";
+            txtDisplay.Text = Math.Tan(Double.Parse(txtDisplay.Text)).ToString();
+        }
+
+        private void btnCos_Click(object? sender, EventArgs e)
+        {
+            lblOperacion.Text = $"Cos({txtDisplay.Text}) =";
+            txtDisplay.Text = Math.Cos(Double.Parse(txtDisplay.Text)).ToString();
+        }
+
+        private void btnSqrt_Click(object? sender, EventArgs e)
+        {
+            lblOperacion.Text = $"Cuadrado({txtDisplay.Text}) =";
+            txtDisplay.Text = Math.Sqrt(Double.Parse(txtDisplay.Text)).ToString();
+        }
+
+        private void btnLnx_Click(object? sender, EventArgs e)
+        {
+            lblOperacion.Text = $"Ln({txtDisplay.Text}) =";
+            txtDisplay.Text = Convert.ToString(System.Math.Log(Convert.ToDouble(txtDisplay.Text)));
+        }
+
+        private void btnExp_Click(object? sender, EventArgs e)
+        {
+            lblOperacion.Text = $"Exp({txtDisplay.Text}) =";
+            txtDisplay.Text = Math.Pow(2.718281, double.Parse(txtDisplay.Text)).ToString();
+        }
+
+        private void btnSin_Click(object? sender, EventArgs e)
+        {
+            lblOperacion.Text = $"Sin({txtDisplay.Text}) =";
+            txtDisplay.Text = Math.Sin(Double.Parse(txtDisplay.Text)).ToString();
+        }
+
+        private void btnLog_Click(object? sender, EventArgs e)
+        {
+            lblOperacion.Text =$"Log({txtDisplay.Text}) =";
+            txtDisplay.Text = Math.Log(Double.Parse(txtDisplay.Text)).ToString();
         }
 
         private void btnPi_Click(object? sender, EventArgs e)
