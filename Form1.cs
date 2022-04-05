@@ -298,6 +298,7 @@
             // Eventos
             miEstandar.Click += new EventHandler(menuEstandar_Click);
             miCientifica.Click += new EventHandler(menuCientifica_Click);
+            btnPi.Click+= new EventHandler(btnPi_Click);
 
 
             //Agregar controles al formulario
@@ -308,6 +309,11 @@
             menu.Items.Add(catTipo);
             this.Controls.Add(menu);
             lblOperacion.BringToFront();
+        }
+
+        private void btnPi_Click(object? sender, EventArgs e)
+        {
+            txtDisplay.Text = "3.141592";
         }
 
         private void menuEstandar_Click(object? sender, EventArgs e)
