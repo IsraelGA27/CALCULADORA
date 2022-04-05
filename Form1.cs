@@ -2,6 +2,11 @@
 {
     public partial class Form1 : Form
     {
+        private MenuStrip menu;
+        private ToolStripMenuItem catTipo;
+        private ToolStripMenuItem miEstandar;
+        private ToolStripMenuItem miCientifica;
+
         private Button btnBorrarUltimo;
         private Button btnBorrarActual;
         private Button btnBorrarTodo;
@@ -98,6 +103,11 @@
             btnMod = new Button();
             btnOct = new Button();
 
+            menu = new MenuStrip();
+            catTipo = new ToolStripMenuItem();
+            miEstandar = new ToolStripMenuItem();
+            miCientifica = new ToolStripMenuItem();
+
 
             InitializeComponent();
             InicializarComponentes();
@@ -176,9 +186,36 @@
             btnIgual.Text = "=";
             btnDivision.Text = "/";
 
+            btnPi.Text = "π"; 
+            btnLog.Text = "Log";
+            btnSqrt.Text = "Sqrt";
+            btnCuadrado.Text = "x^2";
+            btnSinh.Text = "Sinh";
+            btnSin.Text = "Sin";
+            btnDec.Text = "Dec";
+            btnXy.Text = "x^y";
+            btnCosh.Text = "Cosh";
+            btnCos.Text = "Cos";
+            btnBin.Text = "Bin";
+            btn1x.Text = "1/x";
+            btnTanh.Text = "Tanh";
+            btnTan.Text = "Tan";
+            btnHex.Text = "Hex";
+            btnLnx.Text = "Ln x";
+            btnExp.Text = "Exp";
+            btnMod.Text = "Mod";
+            btnOct.Text = "Oct";
+
+            
+            catTipo.Text = "Tipo";
+            miEstandar.Text = "Estandar";
+            miCientifica.Text = "Cientifica";
+
+
             //Posicion
             txtDisplay.Location = new Point(10, 50);
             lblOperacion.Location = new Point(10, 50);
+
 
             List<Button> lista = new List<Button>();
             lista.Add(btnBorrarUltimo);
@@ -218,6 +255,49 @@
                 x += 67;
                 count++;
             }
+
+
+            List<Button> Cientifica = new List<Button>();
+            Cientifica.Add(btnPi);
+            Cientifica.Add(btnLog);
+            Cientifica.Add(btnSqrt);
+            Cientifica.Add(btnCuadrado);
+            Cientifica.Add(btnSinh);
+            Cientifica.Add(btnSin);
+            Cientifica.Add(btnDec);
+            Cientifica.Add(btnXy);
+            Cientifica.Add(btnCosh);
+            Cientifica.Add(btnCos);
+            Cientifica.Add(btnBin);
+            Cientifica.Add(btn1x);
+            Cientifica.Add(btnTanh);
+            Cientifica.Add(btnTan);
+            Cientifica.Add(btnHex);
+            Cientifica.Add(btnLnx);
+            Cientifica.Add(btnExp);
+            Cientifica.Add(btnMod);
+            Cientifica.Add(btnOct);
+
+            x = 309;
+            y = 105;
+            count = 0;
+            foreach (Button btn in Cientifica)
+            {
+                if (count == 4)
+                {
+                    x = 309;
+                    y += 67;
+                    count = 0;
+                }
+                btn.Location = new Point(x, y);
+                //btn.Click += new EventHandler(Form1_Load);
+                this.Controls.Add(btn);
+                x += 67;
+                count++;
+            }
+            
+
+
             //Agregar controles al formulario
             this.Controls.Add(txtDisplay);
             this.Controls.Add(lblOperacion);
