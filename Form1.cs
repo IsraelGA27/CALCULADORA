@@ -328,7 +328,7 @@ namespace CALCULADORA
             btnTanh.Click += new EventHandler(btnTanhh_Click);
             btnCosh.Click+= new EventHandler(btnCosh_Click);
             btnDec.Click+= new EventHandler(btnDec_Click);
-            btnMod.Click+= new EventHandler(btnMod_Click);
+            //btnMod.Click+= new EventHandler(btnMod_Click);
 
             //Agregar controles al formulario
             this.Controls.Add(txtDisplay);
@@ -340,11 +340,7 @@ namespace CALCULADORA
             lblOperacion.BringToFront();
         }
 
-        private void btnMod_Click(object? sender, EventArgs e)
-        {
-            lblOperacion.Text = $"Decimales({txtDisplay.Text}) =";
-            txtDisplay.Text = Math.Abs(Double.Parse(txtDisplay.Text)).ToString();
-        }
+       
 
         private void btnDec_Click(object? sender, EventArgs e)
         {
