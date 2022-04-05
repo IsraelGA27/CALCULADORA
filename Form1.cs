@@ -78,25 +78,25 @@
 
 
             // Cientifica
-            btnPi; = new Button();
-            btnLog; = new Button();
-            btnSqrt; = new Button();
-            btnCuadrado; = new Button();
-            btnSinh; = new Button();
-            btnSin; = new Button();
-            btnDec; = new Button();
-            btnXy; = new Button();
-            btnCosh; = new Button();
-            btnCos; = new Button();
-            btnBin; = new Button();
-            btn1x; = new Button();
-            btnTanh; = new Button();
-            btnTan; = new Button();
-            btnHex; = new Button();
-            btnLnx; = new Button();
-            btnExp; = new Button();
-            btnMod; = new Button();
-            btnOct; = new Button();
+            btnPi = new Button();
+            btnLog = new Button();
+            btnSqrt = new Button();
+            btnCuadrado = new Button();
+            btnSinh = new Button();
+            btnSin = new Button();
+            btnDec = new Button();
+            btnXy = new Button();
+            btnCosh = new Button();
+            btnCos = new Button();
+            btnBin = new Button();
+            btn1x = new Button();
+            btnTanh = new Button();
+            btnTan = new Button();
+            btnHex = new Button();
+            btnLnx = new Button();
+            btnExp = new Button();
+            btnMod = new Button();
+            btnOct = new Button();
 
 
             InitializeComponent();
@@ -128,6 +128,26 @@
             btnPunto.Size = new Size(60, 60);
             btnIgual.Size = new Size(60, 60);
             btnDivision.Size = new Size(60, 60);
+
+            btnPi.Size = new Size(60, 60);
+            btnLog.Size = new Size(60, 60);
+            btnSqrt.Size = new Size(60, 60);
+            btnCuadrado.Size = new Size(60, 60);
+            btnSinh.Size = new Size(60, 60);
+            btnSin.Size = new Size(60, 60);
+            btnDec.Size = new Size(60, 60);
+            btnXy.Size = new Size(60, 60);
+            btnCosh.Size = new Size(60, 60);
+            btnCos.Size = new Size(60, 60);
+            btnBin.Size = new Size(60, 60);
+            btn1x.Size = new Size(60, 60);
+            btnTanh.Size = new Size(60, 60);
+            btnTan.Size = new Size(60, 60);
+            btnHex.Size = new Size(60, 60);
+            btnLnx.Size = new Size(60, 60);
+            btnExp.Size = new Size(60, 60);
+            btnMod.Size = new Size(60, 60);
+            btnOct.Size = new Size(60, 60);
 
             txtDisplay.Size = new Size(558, 50);
             txtDisplay.Multiline = true;
