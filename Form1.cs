@@ -23,6 +23,28 @@
         private Button btnIgual;
         private Button btnDivision;
 
+        private Button btnPi;
+        private Button btnLog;
+        private Button btnSqrt;
+        private Button btnCuadrado;
+        private Button btnSinh;
+        private Button btnSin;
+        private Button btnDec;
+        private Button btnXy;
+        private Button btnCosh;
+        private Button btnCos;
+        private Button btnBin;
+        private Button btn1x;
+        private Button btnTanh;
+        private Button btnTan;
+        private Button btnHex;
+        private Button btnLnx;
+        private Button btnExp;
+        private Button btnMod;
+        private Button btnOct;
+
+        
+
         private TextBox txtDisplay;
         private Label lblOperacion;
         private String operacion;
@@ -53,6 +75,30 @@
             btnPunto = new Button();
             btnIgual = new Button();
             btnDivision = new Button();
+
+
+            // Cientifica
+            btnPi; = new Button();
+            btnLog; = new Button();
+            btnSqrt; = new Button();
+            btnCuadrado; = new Button();
+            btnSinh; = new Button();
+            btnSin; = new Button();
+            btnDec; = new Button();
+            btnXy; = new Button();
+            btnCosh; = new Button();
+            btnCos; = new Button();
+            btnBin; = new Button();
+            btn1x; = new Button();
+            btnTanh; = new Button();
+            btnTan; = new Button();
+            btnHex; = new Button();
+            btnLnx; = new Button();
+            btnExp; = new Button();
+            btnMod; = new Button();
+            btnOct; = new Button();
+
+
             InitializeComponent();
             InicializarComponentes();
         }
@@ -111,8 +157,8 @@
             btnDivision.Text = "/";
 
             //Posicion
-            txtDisplay.Location = new Point(10, 30);
-            lblOperacion.Location = new Point(10, 30);
+            txtDisplay.Location = new Point(10, 50);
+            lblOperacion.Location = new Point(10, 50);
 
             List<Button> lista = new List<Button>();
             lista.Add(btnBorrarUltimo);
@@ -136,7 +182,7 @@
             lista.Add(btnIgual);
             lista.Add(btnDivision);
             int x = 10;
-            int y = 85;
+            int y = 105;
             int count = 0;
             foreach (Button btn in lista)
             {
