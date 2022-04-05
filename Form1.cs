@@ -295,13 +295,31 @@
                 x += 67;
                 count++;
             }
-            
+            // Eventos
+            miEstandar.Click += new EventHandler(menuEstandar_Click);
+            miCientifica.Click += new EventHandler(menuCientifica_Click);
 
 
             //Agregar controles al formulario
             this.Controls.Add(txtDisplay);
             this.Controls.Add(lblOperacion);
+            catTipo.DropDownItems.Add(miEstandar);
+            catTipo.DropDownItems.Add(miCientifica);
+            menu.Items.Add(catTipo);
+            this.Controls.Add(menu);
             lblOperacion.BringToFront();
+        }
+
+        private void menuEstandar_Click(object? sender, EventArgs e)
+        {
+            this.Size = new Size(300,500);
+            txtDisplay.Size = new Size(260, 50);
+        }
+
+        private void menuCientifica_Click(object? sender, EventArgs e)
+        {
+            this.Size = new Size(600, 500);
+            txtDisplay.Size = new Size(558, 50);
         }
 
 
